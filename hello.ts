@@ -1,3 +1,14 @@
-import {capitalize} from 'lodash';
+class Point {
+    static origin = new Point(0, 0);
 
-console.log("Hello " + capitalize("typescript") + "!");
+    x: number;
+    
+    constructor(x: number, public y: number = 0) {
+        this.x = x;
+    }
+
+    dist() {
+        return Math.sqrt(this.x * this.x + this.y * this.y);
+    }
+
+}
